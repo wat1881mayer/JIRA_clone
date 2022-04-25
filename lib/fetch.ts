@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-export const getAllPostData = async () => {
+export const getAllPostsData = async () => {
   const res = await fetch(
     new URL('https://jsonplaceholder.typicode.com/posts/?_limit=10')
   );
@@ -30,7 +30,7 @@ export const getAllPostIds = async () => {
   });
 };
 
-export const getPostsData = async (id: string) => {
+export const getPostData = async (id: string) => {
   const res = await fetch(
     new URL(`https://jsonplaceholder.typicode.com/posts/${id}`)
   );
